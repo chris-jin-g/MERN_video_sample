@@ -52,7 +52,7 @@ class App extends Component {
         if (!isCaller) newState.callModal = '';
         this.setState(newState);
       })
-      .on('peerStream', (src) => {this.setState({ peerSrc: src }); console.log("PeerStream state", src)})
+      .on('peerStream', (src) => this.setState({ peerSrc: src }))
       .start(isCaller, config);
   }
 
