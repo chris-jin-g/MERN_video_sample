@@ -40,7 +40,7 @@ const configs = addBaseConfig({
     compress: true,
     port: 9000,
     proxy: {
-      '/bridge/': `http://localhost:${socketConfig.PORT}`
+      '/bridge/': `https://nameless-depths-63913.herokuapp.com/`
     },
     watchOptions: {
       aggregateTimeout: 300,
