@@ -17,7 +17,7 @@ function MainWindow({ startCall, clientId }) {
     <div className="container main-window">
       <div>
         <h3>
-          Hi,888 your ID is
+          Hi,677 your ID is
           <input
             type="text"
             className="txt-clientId"
