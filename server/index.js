@@ -8,7 +8,12 @@ const server = http.createServer(app);
 
 app.use('/', express.static(`${__dirname}/../client`));
 
+app.get('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname, '../client/index.html'));
+    res.end();
+});
+
 server.listen(config.PORT, () => {
-  socket(server);
-  console.log('Server is listening at :', config.PORT);
+    socket(server);
+    console.log('Server is listening at :', config.PORT);
 });
