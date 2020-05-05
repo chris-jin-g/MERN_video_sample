@@ -6,7 +6,11 @@ import socket from './socket';
 
 const PC_CONFIG = {
   iceServers: [
-    { url: 'turn:numb.viagenie.ca' }
+    {
+      url: 'turn:numb.viagenie.ca',
+      credential: 'nothingbutthebest',
+      username: 'bluesky410219@gmail.com'
+    }
   ]
 };
 
@@ -23,6 +27,7 @@ class PeerConnection extends Emitter {
       candidate: event.candidate
     });
     this.pc.ontrack = (event) => this.emit('peerStream', event.streams[0]);
+    // eslint-disable-next-line no-console
     console.log('This.pc object@@@', this.pc);
     this.mediaDevice = new MediaDevice();
     this.friendID = friendID;
